@@ -30,7 +30,9 @@ private AplService aplService;
 {
 
 
-    MultiValueMap<String, String> map = serverWebExchange.getFormData().block();
+   /* MultiValueMap<String, String> map = serverWebExchange.getFormData().block();
+
+
 
     Integer limit = new Integer(map.get("limit").get(0));
 
@@ -38,7 +40,8 @@ private AplService aplService;
         log.debug("Setting limit to default of 10");
         limit = 10;
     }
-    model.addAttribute("users", aplService.getUsers(limit));
+    model.addAttribute("users", aplService.getUsers(limit)); */
+   model.addAttribute("users",aplService.getUsers(serverWebExchange.getFormData().map(data-> new Integer(data.getFirst("limit")))));
     return "users";
 }
 }
