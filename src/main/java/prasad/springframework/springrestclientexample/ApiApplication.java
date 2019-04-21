@@ -1,4 +1,4 @@
-package prasad.springframework.api;
+package prasad.springframework.springrestclientexample;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

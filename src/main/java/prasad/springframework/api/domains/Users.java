@@ -20,7 +20,7 @@ public class Users implements Serializable
 {
 
     @JsonProperty("data")
-    private List<Datum> data = null;
+    private List<Datum> data;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
     private final static long serialVersionUID = 2266291084263983578L;
